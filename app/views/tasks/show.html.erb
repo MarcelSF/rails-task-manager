@@ -1,0 +1,12 @@
+<h1>Task details:</h1>
+<p><%= @task.title %></p>
+<p><%= @task.details %></p>
+<p><%= @task.id %></p>
+<p><%= (@task.completed ? "[x] - task is complete" : "[ ] - task is not complete") %></p>
+<button><%= link_to 'Back to list', '/tasks'  %></button>
+<button><%= link_to 'Edit this task', edit_path  %></button>
+<button><%= link_to "Delete", delete_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></button>
+
+
